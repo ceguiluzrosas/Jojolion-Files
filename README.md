@@ -1,11 +1,12 @@
 # Jojolian-Files
 
 **Things to Install**:
-[  ] Brew
-[  ] Vim Profile
-[  ] Atom
-[  ] Oh My Zsh
+[x] Brew
+[ ] Vim Profile
+[ ] Atom
+[x] Oh My Zsh
+[x] Hub (from Github)
 
 **Things to Setup**:
-[  ] School + Work Directories
-[  ] Directory with Bash Scripts
+[x] School + Work Directories
+[x] Directory with Bash Scripts
