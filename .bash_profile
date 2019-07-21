@@ -1,9 +1,11 @@
 #####################
 ### unix commands ###
 #####################
-alias tree='tree -CD' # for small directories
-alias ld='ls -ld */'
-alias ls='ls -G'
+alias tree='tree -CD' # displays tree (best for small directories)
+alias ld='ls -lad */' # lists only directories
+alias ls='ls -aG' # lists all with color and hidden files
+alias get5='ls -lt ~/Downloads | head -n 6' # returns recent Downloaded files 
+alias hgrep='history | grep ' # greps history for keyword
 
 ####################
 ### aws commands ###
