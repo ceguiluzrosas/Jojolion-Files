@@ -1,5 +1,8 @@
 #!/bin/bash
 
+###########################
+### Installing Packages ###
+###########################
 if [[ "$OSTYPE" == "darwin"* ]]; then
     # Install HomeBrew
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -10,9 +13,21 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     wait ${!}
 
     # Install Packages with Brew
-    brew install hub # from Github
+    brew install hub # github package
+    brew install the_silver_searcher # faster way to find keywords
+
+else # Ubuntu OS
+
+    # Install Packages with apt-get
+    apt-get install silversearcher-ag
+
 fi
 
+##########################
+### Create Directories ###
+##########################
+SCRIPTS_DIR="$HOME/ScriptsDir"; echo $SCHOOL_DIR
 WORK_DIR="$HOME/WorkDir" ; echo $WORK_DIR
 SCHOOL_DIR="$HOME/SchoolDir"; echo $SCHOOL_DIR
-mkdir $WORK_DIR $SCHOOL_DIR
+mkdir $WORK_DIR $SCHOOL_DIR $SCRIPTS_DIR
+
