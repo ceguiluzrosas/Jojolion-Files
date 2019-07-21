@@ -1,3 +1,8 @@
+#############
+### SetUp ###
+#############
+export PATH="$PATH:$HOME/ScriptsDir/" # adds scripts files to PATH
+
 #####################
 ### unix commands ###
 #####################
