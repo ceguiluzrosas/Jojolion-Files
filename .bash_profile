@@ -31,6 +31,7 @@ alias gbranch="git branch | grep \* | cut -d ' ' -f2" # returns the name of the 
 alias gfirst='git push --set-upstream origin $(gbranch)' # first time push
 alias grename='git branch -m' # renames a git branch
 alias god='gfirst && gpr' # first push + PR
+alias gdone='git checkout master && git pull && gdel' # pull new changes to master and deletes merged branches
 
 ####################
 ### dev commands ###
