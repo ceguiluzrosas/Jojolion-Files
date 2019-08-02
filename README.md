@@ -1,4 +1,4 @@
-# Jojolian-Files
+# Jojolion-Files
 
 **Things to Install**:
 * [ ] Vim Profile
