@@ -29,5 +29,13 @@ fi
 SCRIPTS_DIR="$HOME/ScriptsDir"; echo $SCHOOL_DIR
 WORK_DIR="$HOME/WorkDir" ; echo $WORK_DIR
 SCHOOL_DIR="$HOME/SchoolDir"; echo $SCHOOL_DIR
-mkdir $WORK_DIR $SCHOOL_DIR $SCRIPTS_DIR
+SCREEN_SHOTS_DIR="$HOME/Desktop/Screen_Shots"; echo $SCREEN_SHOTS_DIR
+mkdir -p $WORK_DIR $SCHOOL_DIR $SCRIPTS_DIR $SCREEN_SHOTS_DIR
+
+##################
+### Vim Things ###
+##################
+
+# autocomplete
+git clone git://github.com/ajh17/VimCompletesMe.git ~/.vim/pack/vendor/start/VimCompletesMe
 
