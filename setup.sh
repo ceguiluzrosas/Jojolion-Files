@@ -35,6 +35,7 @@ mkdir -p $WORK_DIR $SCHOOL_DIR $SCRIPTS_DIR $SCREEN_SHOTS_DIR
 ### Create BashProfile ###
 ##########################
 touch ~/.bash_profile
+cp ./bash_profile ~/.bash_profile
 
 #############################
 ### Vim + Terminal Things ###
@@ -49,11 +50,14 @@ git clone git://github.com/ajh17/VimCompletesMe.git ~/.vim/pack/vendor/start/Vim
 curl -o ~/Desktop/SeaShells.terminal 'https://raw.githubusercontent.com/lysyi3m/macos-terminal-themes/master/schemes/SeaShells.terminal'
 
 # vim completes me
-cd ~/
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 
+# my rules to terminal
 touch ~/.vimrc
 echo "set nu" >> ~/.vimrc
 echo "set laststatus=2" >> ~/.vimrc
 echo "set t_Co=256" >> ~/.vimrc
+
+# adding bash_profile to zshrc
+echo "source ~/.bash_profile" >> ~/.zshrc
