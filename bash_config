@@ -48,3 +48,4 @@ alias pygone="find . | grep -E '(__pycache__|\.pyc|\.pyo$)' | xargs rm -rf" # re
 ######################
 alias zz='vim ~/.zshrc' # shortcut to zschr file
 alias bb='vim ~/.bash_profile' # shortcut to bash file
+alias vv="vim ~/.vimrc" # shortcut to vimrc file
