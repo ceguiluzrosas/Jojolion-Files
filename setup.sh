@@ -13,6 +13,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     # Install Packages with Brew
     brew install hub # github package
     brew install the_silver_searcher # faster way to find keywords
+    brew install python3
 
 else # Ubuntu OS
 
@@ -30,10 +31,23 @@ SCHOOL_DIR="$HOME/SchoolDir"; echo $SCHOOL_DIR
 SCREEN_SHOTS_DIR="$HOME/Desktop/Screen_Shots"; echo $SCREEN_SHOTS_DIR
 mkdir -p $WORK_DIR $SCHOOL_DIR $SCRIPTS_DIR $SCREEN_SHOTS_DIR
 
-##################
-### Vim Things ###
-##################
+##########################
+### Create BashProfile ###
+##########################
+touch ~/.bash_profile
+
+#############################
+### Vim + Terminal Things ###
+#############################
+pip3 install --upgrade pip --user
+mkdir ~/.config
+
+touch ~/.vimrc
+echo "set nu" >> ~/.vimrc
+echo "set laststatus=2" >> ~/.vimrc
+echo "set t_Co=256" >> ~/.vimrc
 
 # autocomplete
 git clone git://github.com/ajh17/VimCompletesMe.git ~/.vim/pack/vendor/start/VimCompletesMe
-
+sh -c "$(curl https://raw.githubusercontent.com/lysyi3m/macos-terminal-themes/master/schemes/SeaShells.terminal)"
+curl -o ~/Desktop/SeaShells.terminal 'https://raw.githubusercontent.com/lysyi3m/macos-terminal-themes/master/schemes/SeaShells.terminal'
