@@ -2,7 +2,7 @@
 # that are occassionally edited
 
 alias school="cd ~/SchoolDir/"
-alias scripts="cd ~/SchoolDir/"
+alias scripts="cd ~/ScriptsDir/"
 alias work="cd ~/WorkDir/"
 alias jojo="cd ~/Jojolion-Files/"
 

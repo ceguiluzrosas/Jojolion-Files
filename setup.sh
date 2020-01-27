@@ -61,3 +61,9 @@ echo "set t_Co=256" >> ~/.vimrc
 
 # adding bash_profile to zshrc
 echo "source ~/.bash_profile" >> ~/.zshrc
+
+########################
+### Developer Things ###
+########################
+python3 -m pip install --user virtualenv
+
