@@ -2,6 +2,7 @@
 ### SetUp ###
 #############
 export PATH="$PATH:$HOME/ScriptsDir/" # adds scripts files to PATH
+export PATH="$PATH:Library/Python/3.7/bin" # adds python to PATH
 alias python=/usr/local/bin/python3.7
 
 #####################
