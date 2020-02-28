@@ -31,6 +31,12 @@ SCHOOL_DIR="$HOME/SchoolDir"; echo $SCHOOL_DIR
 SCREEN_SHOTS_DIR="$HOME/Desktop/Screen_Shots"; echo $SCREEN_SHOTS_DIR
 mkdir -p $WORK_DIR $SCHOOL_DIR $SCRIPTS_DIR $SCREEN_SHOTS_DIR
 
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # redirecting screenshots to folder
+    defaults write com.apple.screencapture location $SCREEN_SHOTS_DIR
+fi
+
+
 ##########################
 ### Create BashProfile ###
 ##########################

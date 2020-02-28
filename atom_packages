@@ -1,3 +1,4 @@
 apm install autocomplete-sql
 apm install file-type-icons
 apm install platformio-ide-terminal
+apm install kite
