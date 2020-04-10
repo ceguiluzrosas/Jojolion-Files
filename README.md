@@ -10,7 +10,7 @@
 * [x] Oh My Zsh
 * [x] Hub (from Github)
 * [x] The Silver Searcher
-* [x] Include Atom packages
+* [x] Atom packages
 
 **Things to Setup**:
 * [x] School + Work Directories
