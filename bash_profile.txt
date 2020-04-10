@@ -1,0 +1,6 @@
+alias school="cd ~/SchoolDir/"
+alias scripts="cd ~/ScriptsDir/"
+alias work="cd ~/WorkDir/"
+alias jojo="cd ~/Jojolion-Files/"
+
+source ~/Jojolion-Files/dev_commands.txt

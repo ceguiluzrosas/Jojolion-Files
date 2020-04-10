@@ -11,7 +11,7 @@ alias python=/usr/local/bin/python3.7
 alias tree='tree -CD' # displays tree (best for small directories)
 alias ld='ls -lad */' # lists only directories
 alias ls='ls -aG' # lists all with color and hidden files
-alias get5='ls -lt ~/Downloads | head -n 6' # returns recent Downloaded files 
+alias get5='ls -lt ~/Downloads | head -n 8' # returns recent Downloaded files
 alias hgrep='history | grep ' # greps history for keyword
 
 ####################
@@ -24,6 +24,7 @@ alias cfg='vim ~/.aws/config' # edits the aws iam config file
 ### git commands ###
 ####################
 TEAM='' # github_usernames of team
+alias gs='git status' # shortcut for status
 alias gpr='hub pull-request -r $TEAM --browse -m' # creates a PR with TEAM as reviewers
 alias gpr2='hub pull-request -r --browse -m' # creates a PR with no teams as reviewers
 alias gdel='git branch --merged master | grep -v -e master | xargs -n 1 git branch -d' # deletes all merged branches
@@ -33,6 +34,7 @@ alias gac='git add --all && git commit -am ' # add new files and commits changes
 alias gbranch="git branch | grep \* | cut -d ' ' -f2" # returns the name of the current branch
 alias gfirst='git push --set-upstream origin $(gbranch)' # first time push
 alias grename='git branch -m' # renames a git branch
+alias gb='git checkout -b' # create new branch
 alias god='gfirst && gpr' # first push + PR
 alias gesus='gfirst && gpr2' # first push + no_team PR
 alias gdone='git checkout master && git pull && gdel' # pull new changes to master and deletes merged branches
