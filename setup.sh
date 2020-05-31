@@ -34,7 +34,7 @@ defaults write com.apple.screencapture location $SCREEN_SHOTS_DIR
 ### Developer Things ###
 ########################
 pip3 install --upgrade pip --user
-python3 -m pip install --user virtualenv
+python3 -m pip install --user -r pip_requirements.txt
 
 # autocomplete
 git clone git://github.com/ajh17/VimCompletesMe.git ~/.vim/pack/vendor/start/VimCompletesMe

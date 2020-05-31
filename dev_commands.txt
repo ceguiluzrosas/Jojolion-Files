@@ -11,7 +11,8 @@ alias python=/usr/local/bin/python3.7
 alias tree='tree -CD' # displays tree (best for small directories)
 alias ld='ls -lad */' # lists only directories
 alias ls='ls -aG' # lists all with color and hidden files
-alias get5='ls -lt ~/Downloads | head -n 8' # returns recent Downloaded files
+alias get5='ls -t ~/Downloads | head -n 8' # returns recent Downloaded files
+alias cat='pygmentize -O full,style=fruity' # adds syntax highlighting to file
 alias hgrep='history | grep ' # greps history for keyword
 
 ####################
