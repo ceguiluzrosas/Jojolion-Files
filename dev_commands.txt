@@ -32,6 +32,7 @@ alias gdel='git branch --merged master | grep -v -e master | xargs -n 1 git bran
 alias gfix='git fetch && git rebase -i origin/master' # safely rebases new changes for cleaner history
 alias gammend='git commit -a --amend --no-edit && git push --force' # ammends a small change to PR
 alias gac='git add --all && git commit -am ' # add new files and commits changes
+alias gacp = 'gac && git push' # gac + push
 alias gbranch="git branch | grep \* | cut -d ' ' -f2" # returns the name of the current branch
 alias gfirst='git push --set-upstream origin $(gbranch)' # first time push
 alias grename='git branch -m' # renames a git branch
