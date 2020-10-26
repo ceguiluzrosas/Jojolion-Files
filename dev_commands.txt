@@ -1,9 +1,10 @@
 #############
 ### SetUp ###
 #############
+export PY_VERSION="$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:3])))')" # gets python version
+alias python="/usr/local/bin/python${PY_VERSION%.*}"
 export PATH="$PATH:$HOME/ScriptsDir/" # adds scripts files to PATH
-export PATH="$PATH:Library/Python/3.7/bin" # adds python to PATH
-alias python=/usr/local/bin/python3.7
+export PATH="$PATH:/usr/local/Cellar/python@${PY_VERSION%.*}/$PY_VERSION/bin" # adds python to PATH
 
 #####################
 ### unix commands ###
@@ -24,10 +25,8 @@ alias cfg='vim ~/.aws/config' # edits the aws iam config file
 ####################
 ### git commands ###
 ####################
-TEAM='' # github_usernames of team
 alias gs='git status' # shortcut for status
-alias gpr='hub pull-request -r $TEAM --browse -m' # creates a PR with TEAM as reviewers
-alias gpr2='hub pull-request -r --browse -m' # creates a PR with no teams as reviewers
+alias gpr='hub pull-request --browse -m' # creates a PR with no teams as reviewers
 alias gdel='git branch --merged master | grep -v -e master | xargs -n 1 git branch -d' # deletes all merged branches
 alias gfix='git fetch && git rebase -i origin/master' # safely rebases new changes for cleaner history
 alias gammend='git commit -a --amend --no-edit && git push --force' # ammends a small change to PR
@@ -37,8 +36,9 @@ alias gfirst='git push --set-upstream origin $(gbranch)' # first time push
 alias grename='git branch -m' # renames a git branch
 alias gb='git checkout -b' # create new branch
 alias god='gfirst && gpr' # first push + PR
-alias gesus='gfirst && gpr2' # first push + no_team PR
+alias gesus='gfirst && gpr' # first push + no_team PR
 alias gdone='git checkout master && git pull && gdel' # pull new changes to master and deletes merged branches
+alias gd='git diff' # shorthand to get git differences
 
 ####################
 ### dev commands ###
@@ -46,10 +46,13 @@ alias gdone='git checkout master && git pull && gdel' # pull new changes to mast
 alias exp='source .env && export $(cut -d= -f1 .env)' # exports .env vars
 alias terra='terraform init --upgrade && terraform plan' # safely does a terraform plan
 alias pygone="find . | grep -E '(__pycache__|\.pyc|\.pyo$)' | xargs rm -rf" # removes __pycache__ files
+alias linknode="ln -s ~/WorkDir/node_modules node_modules"
+alias pon="brew services start postgresql"
+alias poff="brew services stop postgresql"
 
 ######################
 ### other commands ###
 ######################
 alias zz='vim ~/.zshrc' # shortcut to zschr file
-alias bb='vim ~/.bash_profile' # shortcut to bash file
+alias bb='vim ~/.bashrc' # shortcut to bashrc file
 alias vv="vim ~/.vimrc" # shortcut to vimrc file
