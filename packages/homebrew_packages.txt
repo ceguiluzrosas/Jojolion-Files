@@ -1,0 +1,5 @@
+git
+hub
+python3
+the_silver_searcher
+awscli
