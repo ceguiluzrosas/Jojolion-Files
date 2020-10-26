@@ -1,9 +1,10 @@
 #############
 ### SetUp ###
 #############
+alias python="/usr/local/bin/$PY_VERSION"
+export PY_VERSION="python -c 'import sys; print(".".join(map(str, sys.version_info[:3])))'" # gets python version
 export PATH="$PATH:$HOME/ScriptsDir/" # adds scripts files to PATH
-export PATH="$PATH:Library/Python/3.7/bin" # adds python to PATH
-alias python=/usr/local/bin/python3.7
+export PATH="$PATH:/usr/local/Cellar/python@${PY_VERSION%.*}/$PY_VERSION/bin" # adds python to PATH
 
 #####################
 ### unix commands ###
