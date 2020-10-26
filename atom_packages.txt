@@ -1,5 +1,0 @@
-autocomplete-sql
-platformio-ide-terminal
-docker
-language-docker-l
-file-icons
