@@ -47,10 +47,9 @@ git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 # Adding Profiles
-cat ./profiles/rfiles/bash_profile.txt >> ~/.bashrc
+cat ./profiles/bash_profile.txt >> ~/.bashrc
 cat ./profiles/vim_profile.txt >> ~/.vimrc
 cat ./profiles/zsh_profile.txt >> ~/.zshrc
 
 # Installing Editor Packages
-while read package; do apm install "$package" ; done < ./packages/atom_packages.txt
 while read package; do code --install-extension "$package" ; done < ./packages/vscode_packages.txt
